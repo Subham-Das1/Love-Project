@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(246, 135, 190);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .main {
+            text-align: center;
+        }
+        video{
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2>Hehe I knew it</h2>
+        <video src="Love.mp4" loop autoplay muted playsinline style="animation: slowdown 5s infinite;"></video>
+    </div>
+    <script>
+         if (performance.navigation.type === 1) {
+        window.location.href = 'first.html';
+    }
+    </script>
+</body>
+</html>
