@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(246, 135, 190);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .main {
+            text-align: center;
+        }
+        video{
+            height: 150px;
+            width: 150px;
+        }
+        button{
+            padding: 10px;
+        }
+        button:hover{
+            background-color: rgb(246, 135, 190);
+            color: white;
+        }
+        #noBtn{
+            margin-left: 20px;
+            margin-top: 10px;
+            font-size: 20px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        #yesBtn{
+            margin-top: 10px;
+            font-size: 20px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2>Ek baar phir soch le</h2>
+        <video src="eat-cute.mp4" loop autoplay muted playsinline style="animation: slowdown 5s infinite;"></video>
+        <div class="btn">
+            <button id="yesBtn"><b>Yes</b></button>
+            <button id="noBtn"><b>No</b></button>
+        </div>
+    </div>
+    <script>
+        const yesBtn = document.getElementById("yesBtn");
+
+        yesBtn.addEventListener("click", function() {
+            window.location.href = "last.html";
+        });
+        const noBtn = document.getElementById("noBtn");
+
+        noBtn.addEventListener("click", function() {
+            window.location.href = "fourth.html";
+        });
+        if (performance.navigation.type === 1) {
+        // Redirect to first.html
+        window.location.href = 'first.html';
+    }
+    </script>
+</body>
+</html>
